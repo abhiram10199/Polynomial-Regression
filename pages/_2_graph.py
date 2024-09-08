@@ -15,10 +15,14 @@ def display() -> None:
 
 # Retrieves the values from session state
 def retrieve_values() -> tuple:
-    X_Points = st.session_state['X_Points']
-    Y_Points = st.session_state['Y_Points']
-    degree = st.session_state['Degree']
-    return X_Points, Y_Points, degree
+    try:
+        X_Points = st.session_state['X_Points']
+        Y_Points = st.session_state['Y_Points']
+        degree = st.session_state['Degree']
+        return X_Points, Y_Points, degree
+    except KeyError:
+        st.error("You haven't uploaded a CSV file yet.")
+        st.stop()
 
 
 # Retrieves the values from session state and returns the coefficients
@@ -84,3 +88,4 @@ st.write('\n')
 st.write('\n')
 st.write('\n')
 st.page_link(page="pages/_1_values.py", label="**Values**", help="Upload a CSV file or edit the DataFrame.")
+st.page_link(page="pages/_3_calculation.py", label="**Calculation**", help="Calculate the coefficients of the polynomial.")
