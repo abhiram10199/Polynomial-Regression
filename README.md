@@ -16,14 +16,14 @@ This project demonstrates a polynomial regression model implemented using Stream
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/polynomial-regression-streamlit.git
+   git clone https://github.com/abhiram10199/Polynomial-Regression.git
    ```
 
 2. Install dependencies:
 
    ```bash
-   cd polynomial-regression-streamlit
-   pip install streamlit numpy pandas
+   cd Polynomial-Regression
+   pip install -r requirements.txt
    ```
 
 **Usage:**
