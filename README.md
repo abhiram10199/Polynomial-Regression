@@ -1,37 +1,51 @@
-## Quadratic Polynomial Regression with Streamlit
+## Polynomial Regression in Streamlit
 
-### Goal
-Develop a Python application using Streamlit to perform quadratic polynomial regression on manually entered data points.
+**Description:**
 
-### Todo Checklist
+This project demonstrates a polynomial regression model implemented using Streamlit, a Python library for creating interactive web apps. Users can input data points, specify the degree of the polynomial, and visualize the fitted curve alongside the data.
 
-**Create a Streamlit Interface**
-* Set up basic layout and components (input fields, buttons, chart display).
+**Key Features:**
 
-**Implement Data Input**
-* Allow users to manually enter x and y values.
-* Store entered data in a list or DataFrame.
+* User-friendly interface
+* Customizable polynomial degree
+* Interactive visualization
+  
 
-**Perform Polynomial Regression**
-* Calculate polynomial coefficients using the normal equations.
+**Installation:**
 
-**Generate Predictions**
-* Use the fitted model to predict y values for given x values.
+1. Clone the repository:
 
-**Visualize Results**
-* Create a plot showing the original data points and the fitted polynomial curve.
+   ```bash
+   git clone https://github.com/your-username/polynomial-regression-streamlit.git
+   ```
 
-### Milestones
+2. Install dependencies:
 
-1. **Basic Interface:** Create a Streamlit app with input fields for x and y.
-2. **Data Storage:** Implement a mechanism to store entered data points.
-3. **Polynomial Regression:** Write the function to calculate polynomial coefficients.
-4. **Prediction:** Implement the function to predict y values.
-5. **Visualization:** Create the plot to display the data and fitted curve.
+   ```bash
+   cd polynomial-regression-streamlit
+   pip install streamlit numpy pandas
+   ```
 
-### Additional Features (for later)
+**Usage:**
 
-* **Linear and Cubic Regression:** Implement options to switch between different polynomial degrees.
-* **CSV Upload:** Allow users to upload a CSV file containing data points.
-* **Regularization:** Explore regularization techniques (L1, L2) to prevent overfitting.
-* **Residual Analysis:** Calculate and visualize residuals to assess model fit.
+1. Run the app:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+2. Enter data points in the provided text boxes.
+3. Select the desired polynomial degree.
+4. Click the "Fit Curve" button.
+5. Observe the scatter plot and fitted curve.
+
+**Enhancements:**
+* Error handling
+* Save/export functionality
+* Interactive visualization elements
+
+
+
+* Streamlit: [https://docs.streamlit.io/](https://docs.streamlit.io/)
+* NumPy: [https://numpy.org/](https://numpy.org/)
+* Pandas: [https://pandas.pydata.org/](https://pandas.pydata.org/)
