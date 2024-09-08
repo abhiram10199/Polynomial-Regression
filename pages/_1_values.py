@@ -15,12 +15,15 @@ def display() -> None:
 def degree() -> int:
     st.markdown("#### What power do you want to use for the curve?")
     degree = st.text_input('Degree:')
+    if degree < '2': 
+        st.markdown("#### Please enter a natural number >2...")
+        return 0
     try:
         degree = int(degree)
         st.session_state['Degree'] = int(degree)
         return degree
     except:
-        st.write("Please enter a valid natural number >2...")
+        st.write("#### Please enter a valid natural number >2...")
         return 0
     
 
@@ -85,16 +88,7 @@ else:
         st.markdown('### Uploaded Chart')
         display_chart(x_points, y_points)
 
-st.session_state
-
 st.write('\n')
 st.write('\n')
 st.write('\n')
 st.page_link(page="pages/_2_graph.py", label="**Graph**", help="Display the scatter plot and regression curve.")
-
-
-
-#! Not implemented
-# Adds a row to the uploaded DataFrame/table
-def add_row():
-    ...
