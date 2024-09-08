@@ -73,6 +73,7 @@ def plotter(X_Points, Y_Points, xy_range) -> None:
 
 
 display()
+st.markdown("If the Values page ghosted and appears along with graph, reclick on graph in the sidebar!")
 X_Points, Y_Points, degree = retrieve_values()
 
 try:
@@ -83,7 +84,6 @@ except KeyError:
 
 plotter(X_Points, Y_Points, regression_curve_values(X_Points, Coefficient_Matrix))
 
-st.markdown("If the Values page ghosted and appears along with graph, reclick on graph in the sidebar!")
 st.write('\n')
 st.write('\n')
 st.write('\n')
